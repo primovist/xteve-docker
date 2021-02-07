@@ -23,7 +23,8 @@ chown xteve:xteve /xteve/xteve
 USER xteve
 
 #Create folder structure for backups and tmp files
-RUN mkdir /home/xteve/.xteve/ &&b mkdir /home/xteve/.xteve/backup/ && \
+RUN mkdir /home/xteve/.xteve/ && \
+mkdir /home/xteve/.xteve/backup/ && \
 mkdir /tmp/xteve && \
 chown xteve:xteve /home/xteve/.xteve/ && \
 chown xteve:xteve /home/xteve/.xteve/backup/ && \
