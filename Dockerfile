@@ -4,7 +4,7 @@ LABEL maintainer="primovist" \
         org.label-schema.version=2.32-r0
 
 # Dependencies
-RUN apk --no-cache add curl=7.67.0-r0 vlc=3.0.8-r7 ffmpeg=4.2.1-r3 tzdata=2020a-r0 bash=5.0.11-r1 && \
+RUN apk --no-cache add curl vlc ffmpeg tzdata bash && \
 rm -rf /var/cache/apk/*
 
 # Add xteve binary
