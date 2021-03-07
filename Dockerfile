@@ -1,7 +1,6 @@
 FROM alpine
 LABEL maintainer="primovist" \
         org.label-schema.name="xteve" \
-        org.label-schema.version=2.32-r0
 
 # Dependencies
 RUN apk --no-cache add curl vlc ffmpeg tzdata bash && \
@@ -15,7 +14,6 @@ RUN mkdir -p /xteve && \
 unzip -o /tmp/xteve_linux_amd64.zip -d /xteve && \
 rm /tmp/xteve_linux_amd64.zip && \
 chmod +x /xteve/xteve && \
-chown xteve:xteve /xteve/xteve
 
 # Expose Ports for Access
 EXPOSE 34400
