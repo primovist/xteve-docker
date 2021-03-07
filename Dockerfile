@@ -14,24 +14,8 @@ ADD https://github.com/xteve-project/xTeVe-Downloads/raw/master/xteve_linux_amd6
 RUN mkdir -p /xteve && \
 unzip -o /tmp/xteve_linux_amd64.zip -d /xteve && \
 rm /tmp/xteve_linux_amd64.zip && \
-addgroup -S xteve && \
-adduser -S xteve -G xteve && \
 chmod +x /xteve/xteve && \
 chown xteve:xteve /xteve/xteve
-
-# Set user contexts
-USER xteve
-
-#Create folder structure for backups and tmp files
-RUN mkdir /home/xteve/.xteve/ && \
-mkdir /home/xteve/.xteve/backup/ && \
-mkdir /tmp/xteve && \
-chown xteve:xteve /home/xteve/.xteve/ && \
-chown xteve:xteve /home/xteve/.xteve/backup/ && \
-chown xteve:xteve /tmp/xteve
-
-# Volumes
-VOLUME /home/xteve/.xteve
 
 # Expose Ports for Access
 EXPOSE 34400
